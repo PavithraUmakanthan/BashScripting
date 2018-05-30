@@ -1,0 +1,4 @@
+/function that compares two numbers and print "fizz" or "buzz" or "fizzbuzz" accordingly
+//input (parameters) = 2 numbers
+//work: compare the 2 numbers. Whether the first number is greater than or lesser than the second number.
+//output(print) = fizz or buzz or fizzbuzz
