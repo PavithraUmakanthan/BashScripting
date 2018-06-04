@@ -26,4 +26,23 @@
 #      input:21
 #      output:fizz
 
+function second(){
+   if (( $1 % 3 == 0 )) && (( $1 % 5 == 0 ));then
+       var="fizzbuzz"
+   elif (( $1 % 3 == 0 ));then
+       var="fizz"
+   elif (( $1 % 5 == 0 ));then
+       var="buzz"
+   else
+       var=$n
+   fi    
+}
 
+function first(){
+    for n in $(seq 1 100)
+do
+    second n
+    echo $var
+done
+}
+first
