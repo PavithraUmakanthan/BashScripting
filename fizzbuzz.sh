@@ -1,3 +1,4 @@
+#!/bin/bash
 #first function that prints the return value from the second function
 #work: 
 #   Step1:the loop will run 100 times, once for each number between 1 and 100
@@ -42,7 +43,7 @@ function first(){
     for n in $(seq 1 100)
 do
     second n
-    echo $var
+    echo "$var"
 done
 }
 first
