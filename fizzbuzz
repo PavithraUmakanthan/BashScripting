@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-#main function that prints the return value from the second function
+#main function that prints the return value from the fizzbuzz function
 #work: 
 #   Step1:the loop will run 100 times, once for each number between 1 and 100
-#   Step2:it will pass that number as argument to the second function
-#output (print): print the return value from the second function.
+#   Step2:it will pass that number as argument to the fizzbuzz function
+#output (print): print the return value from the fizzbuzz function.
 
 #fizzbuzz function that returns each number from 1 to 100 by replacing the number with fizz or buzz or fizzbuzz
 #input (parameters) = 1 number from 1 to 100
@@ -33,7 +33,7 @@ set -o pipefail
 set -o nounset
 
 function fizzbuzz {
-    local number=$n
+    local number=$1
    if (( "$number" % 3 == 0 )) && (( "$number" % 5 == 0 ));then
         echo fizzbuzz
    elif (( "$number" % 3 == 0 ));then
@@ -48,10 +48,7 @@ function fizzbuzz {
 function main {
     for n in {1..100};
 do
-    local result
-    result=$(fizzbuzz n)
-    echo "$result"
-
+    echo "$(fizzbuzz $n)"
 done
 }
 main
